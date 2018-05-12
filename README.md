@@ -27,6 +27,7 @@ Phase 2 Web Programming
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- goalall.css<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- myWalletcss.css<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- stylesheet.css<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- app.css<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- image **(all images)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- goal1.png<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- jumbotron1.png<br/>
@@ -42,6 +43,9 @@ Phase 2 Web Programming
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- goal.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- home.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- Login_home.ejs<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- report2016.ejs<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- report2017.ejs<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- report2018.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- partials<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- header.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- footer.ejs<br/>
