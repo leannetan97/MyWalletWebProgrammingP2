@@ -18,7 +18,6 @@ Phase 2 Web Programming
 
 **navigation1.ejs** - navigation bar for pages before login<br/>
 **navigation2.ejs** - navigation bar for pages after login<br/>
-**navigation3.ejs** - navigation bar for function pages<br/>
         
         
 
