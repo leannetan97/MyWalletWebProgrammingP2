@@ -1,26 +1,5 @@
 <%include partials/header %>
-
-   <link rel="stylesheet" type="text/css" href="myWalletcss.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="app.css">
-    <style type="text/css">
-            .jumbotron {
-                margin: 0;
-                padding: 0;
-                font-family: "Times New Roman", arial, Verdana;
-                color: #162257;
-                background: #e6f2ff;
-                min-width: 700px;
-
-            }
-        </style>
 </head>
-
-
-
-<body>
-
-<%include partials/navigation3 %>
 
 <!-- Main component for a primary marketing message or call to action -->
 <!-- income vs expenses chart-->
@@ -31,9 +10,9 @@
 
 <h1 style=" padding-left: 200px; padding-top:5px; font-size: 50px;"> Monthly Summary Report</h1>
 <div style="padding-left:400px; padding-top: 30px; padding-bottom: 20px;">
-    <button onclick="location.href='/report2016';"  class="btn btn-primary" type="button"> 2016</button>
-    <button onclick="location.href='/report2017';" class="btn btn-primary" type="button"> 2017</button>
-    <button onclick="location.href='/report2018';" class="btn btn-primary" type="button"> 2018</button>
+    <button onclick="location.href='2016';"  class="btn btn-primary" type="button"> 2016</button>
+    <button onclick="location.href='2017';" class="btn btn-primary" type="button"> 2017</button>
+    <button onclick="location.href='2018';" class="btn btn-primary" type="button"> 2018</button>
     
   </div>
 <div style="padding-top: 25px;"> </div>
@@ -247,26 +226,40 @@
             
         }
         
-        var chartData = [[7,"#2dc6c8","Others"], [10,"#b6a2dd", "Clothing"], [10,"#5ab1ee","Transportation"], [18,"#d7797f","Groceries"],[55,"#FFFFCF","Foods"]];
+        var chartData1 = [[4,"#2dc6c8","Others"], [10,"#b6a2dd", "Clothing"], [15,"#5ab1ee","Transportation"], [20,"#d7797f","Groceries"],[51,"#FFFFCF","Foods"]];
+        var chartData2 = [[8,"#2dc6c8","Others"], [12,"#b6a2dd", "Clothing"], [11,"#5ab1ee","Transportation"], [19,"#d7797f","Groceries"],[50,"#FFFFCF","Foods"]];
+        var chartData3 = [[6,"#2dc6c8","Others"], [12,"#b6a2dd", "Clothing"], [18,"#5ab1ee","Transportation"], [25,"#d7797f","Groceries"],[39,"#FFFFCF","Foods"]];
+        var chartData4 = [[3,"#2dc6c8","Others"], [7,"#b6a2dd", "Clothing"], [17,"#5ab1ee","Transportation"], [23,"#d7797f","Groceries"],[51,"#FFFFCF","Foods"]];
+        var chartData5 = [[10,"#2dc6c8","Others"], [12,"#b6a2dd", "Clothing"], [17,"#5ab1ee","Transportation"], [22,"#d7797f","Groceries"],[39,"#FFFFCF","Foods"]];
+        var chartData6 = [[5,"#2dc6c8","Others"], [10,"#b6a2dd", "Clothing"], [15,"#5ab1ee","Transportation"], [21,"#d7797f","Groceries"],[49,"#FFFFCF","Foods"]];
+
+        var chartData7 = [[12,"#2dc6c8","Others"], [13,"#b6a2dd", "Clothing"], [25,"#5ab1ee","Transportation"], [11,"#d7797f","Groceries"],[39,"#FFFFCF","Foods"]];
+        var chartData8 = [[5,"#2dc6c8","Others"], [10,"#b6a2dd", "Clothing"], [15,"#5ab1ee","Transportation"], [23,"#d7797f","Groceries"],[47,"#FFFFCF","Foods"]];
+        var chartData9 = [[6,"#2dc6c8","Others"], [14,"#b6a2dd", "Clothing"], [15,"#5ab1ee","Transportation"], [25,"#d7797f","Groceries"],[50,"#FFFFCF","Foods"]];
+        var chartData10 = [[4,"#2dc6c8","Others"], [8,"#b6a2dd", "Clothing"], [12,"#5ab1ee","Transportation"], [23,"#d7797f","Groceries"],[53,"#FFFFCF","Foods"]];
+        var chartData11 = [[5,"#2dc6c8","Others"], [15,"#b6a2dd", "Clothing"], [18,"#5ab1ee","Transportation"], [22,"#d7797f","Groceries"],[40,"#FFFFCF","Foods"]];
+        var chartData12 = [[4,"#2dc6c8","Others"], [7,"#b6a2dd", "Clothing"], [15,"#5ab1ee","Transportation"], [23,"#d7797f","Groceries"],[51,"#FFFFCF","Foods"]];
         
         goChart(chartData);
 
 
     </script>
     </div>
-    <div class="btn-group" style="width:100%; padding-left:50px; padding-bottom: 40px;">
-        <button style="width:15%">January</button>
-        <button style="width:15%">February</button>
-        <button style="width:15%">March</button>
-        <button style="width: 15%">April</button>
-        <button style="width: 15%">May</button>
-        <button style="width: 15%">June</button>
-        <button style="width:15%">July</button>
-        <button style="width:15%">August</button>
-        <button style="width:15%">September</button>
-        <button style="width: 15%">October</button>
-        <button style="width: 15%">November</button>
-        <button style="width: 15%">December</button>
+    <div style="width:100%; padding-left:70px; padding-bottom: 40px;">
+        <button <a href="#" onclick="return goChart(chartData1)"  class="btn btn-info" type="button" style="width:15%">January</button>
+        <button <a href="#" onclick="return goChart(chartData2)"  class="btn btn-info" type="button" style="width:15%">February</button>
+        <button <a href="#" onclick="return goChart(chartData3)"  class="btn btn-info" type="button" style="width:15%">March</button>
+        <button <a href="#" onclick="return goChart(chartData4)"  class="btn btn-info" type="button" style="width:15%">April</button>
+        <button <a href="#" onclick="return goChart(chartData5)"  class="btn btn-info" type="button" style="width:15%">May</button>
+        <button <a href="#" onclick="return goChart(chartData6)"  class="btn btn-info" type="button" style="width:15%">June</button>
+        <div style="padding-bottom:5px;"> </div>
+
+        <button <a href="#" onclick="return goChart(chartData7)"  class="btn btn-info" type="button" style="width:15%">July</button>
+        <button <a href="#" onclick="return goChart(chartData8)"  class="btn btn-info" type="button" style="width:15%">August</button>
+        <button <a href="#" onclick="return goChart(chartData9)"  class="btn btn-info" type="button" style="width:15%">September</button>
+        <button <a href="#" onclick="return goChart(chartData10)"  class="btn btn-info" type="button" style="width:15%">October</button>
+        <button <a href="#" onclick="return goChart(chartData11)"  class="btn btn-info" type="button" style="width:15%">November</button>
+        <button <a href="#" onclick="return goChart(chartData12)"  class="btn btn-info" type="button" style="width:15%">December</button>
     
 </div>
 
@@ -317,7 +310,6 @@
 </script>
 </div>
 </div>
-
         
 <%include partials/footer %>
 
