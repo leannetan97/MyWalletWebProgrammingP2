@@ -1,0 +1,69 @@
+<%- include partials/header %>
+  	<link rel="stylesheet" type="text/css" href="myWalletcss.css">
+
+    <style type="text/css">
+      .jumbotron{
+          padding:60px 60px 60px 60px; 
+          margin-top:80px;
+          margin-bottom: 80px;
+          background-color: #e6f2ff;
+      }
+    </style>
+
+</head>
+
+<body>
+  <%include partials/navigation1%>
+
+<!-- ---------LOGO------------- -->
+	
+<!-- ---------main------------- -->
+<main>
+<!-- Content PART - SIGNUP -->
+
+<div class="container">
+  <div class="jumbotron"> 
+  <p id="smallWalletnName"> <img src="wallet.png" alt="MyWallet LOGO" title="My Wallet"> &nbsp; My Wallet</p>
+  <h2>Sign Up</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; background-color: grey"> Account </div>
+  </div>
+    <form  id="Create_Account" name="AccountRegisterForm" method="post" > <!-- NEED TO PUT ACTION AND METHOD-->
+      <!-- HIDDENPAGE -->
+      
+      <!-- NAME -->
+      <div class="form-group">
+        <p id="smallQuestion"> * field is required to fill.</p>
+        <label for="myName">*Name:</label> <br>
+        <input type="text" id="myName" name="myName" class="form-control" required="required" placeholder="Name"></label>
+      </div>
+      <!-- EMAIL -->
+      <div class="form-group">
+        <label for="myEmail">*E-mail:</label><br>
+        <input type="email" id="signupEmail" name="myEmail" class="form-control" required="required" placeholder="E-mail">
+      </div>
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <label for="pwd">*Password:</label>
+        <input type="password" class="form-control" id="signuppwd" pattern=".{8,}" placeholder="Password" name ="pwd" title="At least 8 characters">
+        <p id="smallQuestion"> At least 8 characters</p>
+      </div>
+      <!-- CONFIRM PASSWORD -->
+      <div class="form-group">
+        <label for="confirm_pwd">*Confirm Password:</label>
+        <input type="password" class="form-control" id="signupconfirm_pwd" name="confirm_pwd" placeholder="Password">
+      </div>
+        
+      <button type="submit" class="btn btn-success">Create Account</button><br> <br>
+
+    </form>
+        <p id="smallQuestion">Already have an Account?<a href="login.html"><button type="button" class="btn btn-link" id="smallQuestion">Login Now</button></a></p>
+  </div>
+</div>
+
+</main>
+	
+
+<!-- ---------------------- -->
+<!-- Footer -->
+<%- include partials/footer %>
