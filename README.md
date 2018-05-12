@@ -10,7 +10,7 @@ Phase 2 Web Programming
 | Login_home.ejs| /MyWallet-login |page after login  |
 | home_user.ejs | /home           |home page         |
 | goal.ejs      | /mygoal         |goal              |
-| expenses.ejs  | /record         |manage expenses   |
+| expenses.ejs  | /manage         |manage expenses   |
 | report2016.ejs| /report2016     |report 2016       |
 | report2017.ejs| /report2017     |report 2017       |
 | report2018.ejs| /report2018     |report 2018       |
