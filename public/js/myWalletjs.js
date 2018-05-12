@@ -38,11 +38,11 @@ function validate_Pwd(){
 //JS redirect function page
 function link_page(clicked_id){
 	if(clicked_id == "goals"){
- 	location.href = 'goal.html';
+ 	location.href = '/mygoal';
 }else if(clicked_id == "expenses"){
-	location.href = 'expenses.html';
+	location.href = '/manage';
 }else if(clicked_id == "reports"){
-	location.href = 'report2017.html';
+	location.href = '/report2018';
 }
 };
 
