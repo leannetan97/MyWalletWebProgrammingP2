@@ -1,6 +1,21 @@
 # WebProgrammingP2
 Phase 2 Web Programming
 
+| ejs file      | path            | Description      |
+| ------------- |-----------------|------------------|
+| home.ejs      | /MyWallet       |page before login |
+| signup.ejs    | /signup         |sign up page      |
+| register.ejs  | /registered     |success register  |
+| login.ejs     | /login          |login page        |
+| Login_home.ejs| /MyWallet-login |page after login  |
+| home_user.ejs | /home           |home page         |
+| goal.ejs      | /mygoal         |goal              |
+| expenses.ejs  | /record         |manage expenses   |
+| report2016.ejs| /report2016     |report 2016       |
+| report2017.ejs| /report2017     |report 2017       |
+| report2018.ejs| /report2018     |report 2018       |
+
+
 **navigation1.ejs** - navigation bar for pages before login<br/>
 **navigation2.ejs** - navigation bar for pages after login<br/>
 **navigation3.ejs** - navigation bar for function pages<br/>
