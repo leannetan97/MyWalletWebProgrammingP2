@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyWallet</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="wallet.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Itim|Overpass" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+
+<!-- OWN JS and CSS -->
+    <link rel="stylesheet" type="text/css" href="myWalletcss.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style type="text/css">
+            .jumbotron {
+                margin: 0;
+                padding: 0;
+                font-family: "Times New Roman", arial, Verdana;
+                color: #162257;
+                background: #e6f2ff;
+                min-width: 700px;
+
+            }
+        </style>
+</head>
+
+
+
+<body>
+  <div class="container">
+<!--bootstrap for navbar-->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- Collapse button -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- BrandName -->
+           <a class="navbar-brand" href="Login_home.html"><span><img class="img-responsive2" alt="myWallet LOGO" src="wallet.png" width="25px" height="25px">&nbsp;&nbsp;MyWallet</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="home_user.html">Home</a></li>
+              <li><a id="info_login">About Us</a></li>
+              <li><a id="nav_Ser_login">Services</a></li>
+              <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Functions<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                   <li><a href="goal.html">Set Goals</a></li>
+                   <li><a href="expenses.html">Manage Expenses</a></li>
+                   <li><a href="report2017.html" class="active">Analyze Expenses</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- RIGHT HAND NAVBAR -->
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="home.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+  </nav>
