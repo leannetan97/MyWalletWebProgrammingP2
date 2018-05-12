@@ -59,10 +59,10 @@ $(document).ready(function() {
 	
 	//After login (other page link to login-home)
 	$("#info_login").click(function(){
-		 location.href = 'Login_home.html#intro';
+		 location.href = '/MyWallet-login#intro';
 	});
 	$("#nav_Ser_login").click(function(){
-		 location.href = 'Login_home.html#Services';
+		 location.href = '/MyWallet-login#Services';
 	});
 
 	//After login ( info link to services)
@@ -86,7 +86,7 @@ $(document).ready(function() {
  	document.querySelector("#Create_Account").addEventListener("submit", function(e){
  		e.preventDefault();
  		if(validate_Pwd()){
- 			location.href = 'registertq.html';
+ 			location.href = '/registered';
  		}
  		return false;
  	});
