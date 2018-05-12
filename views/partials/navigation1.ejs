@@ -1,5 +1,5 @@
  <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
-      <div class="container-fluid">
+        <div class="container-fluid">
         <div class="navbar-header">
           <!-- Collapse button -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -13,20 +13,35 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/home_user">Home</a></li>
+
+              <% if (title=='MyWallet'){%>
+              <li class="active">
+              <% } else{%>
+              <li>
+              <%}%>
+
+              <a href="/MyWallet">Home</a></li>
               <li><a id="info_home">About Us</a></li>
               <li><a id="nav_Ser_home">Services</a></li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Functions<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                   <li><a href="/mygoal">Set Goals</a></li>
-                   <li><a href="/expenses">Manage Expenses</a></li>
-                   <li><a href="/report2018">Analyze Expenses</a></li>
-                </ul>
-              </li>
             </ul>
             <!-- RIGHT HAND NAVBAR -->
             <ul class="nav navbar-nav navbar-right">
-               <li><a href="/MyWallet"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+              <% if (title=='Sign up'){%>
+              <li class="active">
+              <% } else{%>
+              <li>
+              <%}%>
+
+               <a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+
+               <% if (title=='Login'){%>
+              <li class="active">
+              <% } else{%>
+              <li>
+              <%}%>
+
+              <a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
   </nav>

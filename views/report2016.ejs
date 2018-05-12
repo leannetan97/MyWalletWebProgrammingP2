@@ -1,5 +1,28 @@
 <%include partials/header %>
 
+  <link rel="stylesheet" type="text/css" href="myWalletcss.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <style type="text/css">
+            .jumbotron {
+                margin: 0;
+                padding: 0;
+                font-family: "Times New Roman", arial, Verdana;
+                color: #162257;
+                background: #e6f2ff;
+                min-width: 700px;
+
+            }
+        </style>
+</head>
+
+
+
+<body>
+
+
+<%include partials/navigation3 %>
+
 <!-- Main component for a primary marketing message or call to action -->
 <!-- income vs expenses chart-->
 <div class="jumbotron">
@@ -9,9 +32,9 @@
 
 <h1 style=" padding-left: 200px; padding-top:5px; font-size: 50px;"> Monthly Summary Report</h1>
 <div style="padding-left:400px; padding-top: 30px; padding-bottom: 20px;">
-    <button onclick="location.href='2016';"  class="btn btn-primary" type="button"> 2016</button>
-    <button onclick="location.href='2017';" class="btn btn-primary" type="button"> 2017</button>
-    <button onclick="location.href='2018';" class="btn btn-primary" type="button"> 2018</button>
+    <button onclick="location.href='/report2016';"  class="btn btn-primary" type="button"> 2016</button>
+    <button onclick="location.href='/report2017';" class="btn btn-primary" type="button"> 2017</button>
+    <button onclick="location.href='/report2018';" class="btn btn-primary" type="button"> 2018</button>
     
   </div>
 <div style="padding-top: 25px;"> </div>

@@ -1,4 +1,5 @@
   <%- include partials/header %>
+        
         <link rel="stylesheet" type="text/css" href="myWalletcss.css">   
          <style type="text/css">
             .jumbotron{
@@ -11,34 +12,8 @@
       </style>
   </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
-        <div class="container-fluid">
-        <div class="navbar-header">
-          <!-- Collapse button -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <!-- BrandName -->
-           <a class="navbar-brand" href="#"><span><img class="img-responsive2" alt="myWallet LOGO" src="/image/wallet.png" width="25px" height="25px">&nbsp;&nbsp;MyWallet</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="home.ejs">Home</a></li>
-              <li><a id="info_home">About Us</a></li>
-              <li><a id="nav_Ser_home">Services</a></li>
-            </ul>
-            <!-- RIGHT HAND NAVBAR -->
-            <ul class="nav navbar-nav navbar-right">
-               <li><a href="signup.ejs"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-               <li><a href="login.ejs"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-        </div>
-  </nav>
-
-<!-- ---------------------- -->
+       
+<%- include partials/navigation1 %>
 
 <!-- LOGO-->
 	<table>
