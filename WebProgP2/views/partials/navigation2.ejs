@@ -1,0 +1,54 @@
+<!--After Login-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- Collapse button -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- BrandName -->
+           <a class="navbar-brand" href="/MyWalletHome"><span><img class="img-responsive2" alt="myWallet LOGO" src="/image/wallet.png" width="25px" height="25px">&nbsp;&nbsp;MyWallet</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+      <%       if(title == 'Home'){ %>
+                  <li class="active"> 
+      <%      }else{ %>
+                <li> 
+      <%      } %>
+
+              <a href="/home">Home</a></li>
+
+      <%       if(title == 'MyGoal' || title == 'ManageExpenses' || title == 'ExpensesReport' || title == 'Home'){ %>
+                <li><a id="info_login">About Us</a></li> 
+                <li><a id="nav_Ser_login">Services</a></li> 
+      <%       }else{ %>
+                <li><a id="info_home">About Us</a></li> 
+                <li><a id="nav_Ser_home">Services</a></li>
+      <%       } %>
+
+      <%       if(title == 'MyGoal' || title == 'ManageExpenses' || title == 'ExpensesReport'){ %>
+                <li class="dropdown active"> 
+      <%      }else{ %>
+                 <li class="dropdown"> 
+      <%      } %>
+              
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Functions<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                   <li><a href="/home/Goal">Set Goals</a></li>
+                   <li><a href="/home/expenses">Manage Expenses</a></li>
+                   <li><a href="/home/report2018">Analyze Expenses</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- RIGHT HAND NAVBAR -->
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="/MyWallet"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+  </nav>
