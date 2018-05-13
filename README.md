@@ -11,9 +11,9 @@ Phase 2 Web Programming
 | home_user.ejs | /home           |User Home Page    |
 | goal.ejs      | /home/goal      |goal              |
 | expenses.ejs  | /home/expenses  |manage expenses   |
-| report2016.ejs| /home/report/2016|report 2016       |
-| report2017.ejs| /home/report/2017|report 2017       |
-| report2018.ejs| /home/report/2018|report 2018       |
+| report2016.ejs| /home/report2016|report 2016       |
+| report2017.ejs| /home/report2017|report 2017       |
+| report2018.ejs| /home/report2018|report 2018       |
 
 
 **navigation1.ejs** - navigation bar for pages before login<br/>
