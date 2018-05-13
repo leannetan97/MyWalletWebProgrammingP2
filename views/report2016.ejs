@@ -1,15 +1,19 @@
-<%include partials/header %>
+<%- include partials/header %>    
+    <link rel="stylesheet" type="text/css" href="/ goalall.css">
 </head>
+
+<body>
+<%- include partials/navigation3 %>
 
 <!-- Main component for a primary marketing message or call to action -->
 <!-- income vs expenses chart-->
-<div class="jumbotron">
+<div class="jumbo">
 <div style=" padding-top: 100px;"> </div>
 <div style="background-color: #C8EAF7">
 
 
-<h1 style=" padding-left: 200px; padding-top:5px; font-size: 50px;"> Monthly Summary Report</h1>
-<div style="padding-left:400px; padding-top: 30px; padding-bottom: 20px;">
+<h1 style=" padding-left: 350px; padding-top:5px; font-size: 50px;"> Monthly Summary Report</h1>
+<div style="padding-left:525px; padding-top: 30px; padding-bottom: 20px;">
     <button onclick="location.href='/home/report2016';"  class="btn btn-primary" type="button"> 2016</button>
     <button onclick="location.href='/home/report2017';" class="btn btn-primary" type="button"> 2017</button>
     <button onclick="location.href='/home/report2018';" class="btn btn-primary" type="button"> 2018</button>
@@ -19,7 +23,7 @@
   
   
   
-<div height="400" width="600" style="margin-left:200px">
+<div height="400" width="600" style="margin-left:300px">
         <canvas id="chart"></canvas>
     </div>
     <div style="float:left;">    
@@ -310,10 +314,20 @@
 </script>
 </div>
 </div>
-        
-<%include partials/footer %>
 
+<!-- ---------------------- -->
+<!-- Footer -->
+<footer>
+   <i class="fa fa-phone"></i> &nbsp;+603-333 8888 <br>
+  <span class="glyphicon glyphicon-envelope"></span>&nbsp; <a href="mailto:me@gmail.com">myWallet@gmail.com</a><br>
+  <div class="w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ Copyright &copy; 2018 My Wallet
+</footer>
 
-
-
-
+</body>
+</html>

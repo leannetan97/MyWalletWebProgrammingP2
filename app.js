@@ -52,15 +52,15 @@ app.get("/manage", function(req, res){
 });
 
 //report
-app.get("/report2016", function(req, res){
+app.get("/home/report2016", function(req, res){
     res.render("report2016.ejs",{
     	title: 'ExpensesReport'});
 });
-app.get("/report2017", function(req, res){
+app.get("/home/report2017", function(req, res){
     res.render("report2017.ejs",{
     	title: 'ExpensesReport'});
 });
-app.get("/report2018", function(req, res){
+app.get("/home/report2018", function(req, res){
     res.render("report2018.ejs",{
     	title: 'ExpensesReport'});
 });
