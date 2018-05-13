@@ -51,4 +51,8 @@ Phase 2 Web Programming
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- navigation1.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- navigation2.ejs<br/>
 
+<<<<<<< HEAD
           
+=======
+          
+>>>>>>> 3c32edcfca2020c8977d19415e5d6354dba2315a
