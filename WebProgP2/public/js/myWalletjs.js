@@ -2,12 +2,15 @@
 function validate_Pwd(){
 	password = document.querySelector("#signuppwd").value;
 	confirm_password = document.querySelector("#signupconfirm_pwd").value;
-	if (password === confirm_password) {
+	if (password === confirm_password && password != "") {
 		alert("Successful!\nAccount Created");
 		return true;
 	}else{
+		if(password==""){
+		alert("Password is null");
+		}else{
 		alert("Passwords aren't match.\nPlease re-enter your password.");
-		return false;
+		}return false;
 }
 };
 
@@ -24,7 +27,7 @@ function link_page(clicked_id){
 
 //Scrool to what you can do part
 $(document).ready(function() {
-	console.log("load jquery");
+	console.log("load MyWalletjs");
 	//Before login (other page link to home)
 	$("#nav_Ser").click(function(){
 		location.href = '/MyWallet#Services';
@@ -57,16 +60,16 @@ $(document).ready(function() {
 });
 
 //Validate password if correct will redirect to particular Thank you page
- window.addEventListener("load",function(){
- 	console.log("load js");
- 	document.querySelector("#Create_Account").addEventListener("submit", function(e){
- 		e.preventDefault();
- 		if(validate_Pwd()){
- 			location.href = '/registered';
- 		}
- 		return false;
- 	});
-});
+//  window.addEventListener("load",function(){
+//  	console.log("load js");
+//  	document.querySelector("#Create_Account").addEventListener("submit", function(e){
+//  		e.preventDefault();
+//  		if(validate_Pwd()){
+//  		 	location.href = '/MyWallet/registered';
+//  		}
+//  		return false;
+//  	});
+// });
 
 /*This is for Google signin js*/
 // gapi.load('auth2',function(){

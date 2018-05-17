@@ -5,52 +5,117 @@
 <body>
 <% include partials/navigation2 %>
 
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="form-group">
-      <label for="newGoal">New Goal: </label><br><input class="form-control" id="newGoal" type="text" name="TargetGoal" required="required" placeholder="New Goal"></div>
-    <div class="form-group">
-      <label for="targetSaving">Target Saving (RM): </label><br><input class="form-control" id="targetSaving" type="number" name="targetSaving" required="required" placeholder="Target Saving">
-    </div>
-    <div>
-    <button id="Save" class="btn btn-success" onclick="myCreateFunction()">Save</button>
-    </div>
-  </div>
-</div>
-<!-- The edit modal -->
-<!-- For edit pop up -->
-<div id="myModaledit" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="form-group">
-      <label for="editGoal">Edit Goal: </label><br><input class="form-control" id="editGoal" type="text" name="editGoal" required="required" placeholder="Edit Goal"></div>
-    <div class="form-group">
-      <label for="targetSaving">Target Saving (RM): </label><br><input class="form-control" id="targetSavingedit" type="number" name="targetSavingedit" required="required" placeholder="Target Saving">
-    </div>
-    <div>
-      <button id="SaveChange" class="btn btn-success">Save</button>
-    </div>
-  </div>
-</div>
+
 
 
 <!-- ---------------------- -->
 <script>
-    var goals = [];
+window.onload = () => {
+    var goalTbl = <%- goalTable %>;
+    goalTbl = JSON.parse(goalTbl.value);
+    var table = document.getElementById("goalTable");
+    goalTbl.forEach(function(element) {
+        var row = table.insertRow(table.rows.length);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);  
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        console.log("inloop")
+        cell1.innerHTML = '<input type="text" class="usergoal" name="goal" placeholder="Goal" value="' + element.goal + '">';
+        cell2.innerHTML = '<input type="number" class="useramount" name="amount" placeholder="Amount" value="' + element.goalamount + '">';
+        cell3.innerHTML = '<input type="number" class="usersaveamount" name="saveamount" placeholder="MoneySaved(RM)" value="' + element.moneySave + '">';
+        cell4.innerHTML = '<button onclick="mySelectFunction(this)" class="btn btn-primary">Select</button>';
+        cell5.innerHTML = '<button onclick="myDeleteFunction(this)" type="button" class="btn btn-danger">Del</button>';
+    });
+}
+
+  function myCreateGoalFunction() {
+    var table = document.getElementById("goalTable");
+    var row = table.insertRow(table.rows.length);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);  
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    cell1.innerHTML = '<input type="text" class="usergoal" name="goal" placeholder="Goal">';
+    cell2.innerHTML = '<input type="number" class="useramount" name="targetamount" placeholder="TargetGoal(RM)">';
+    cell3.innerHTML = '<input type="number" class="usersaveamount" name="saveamount" placeholder="MoneySaved(RM)">';
+    cell4.innerHTML = '<button onclick="mySelectFunction(this)" class="btn btn-primary">Select</button>';
+    cell5.innerHTML = '<button onclick="myDeleteFunction(this)" type="button" class="btn btn-danger">Del</button>';
+}
+
+function myDeleteFunction(element) {
+    var ans = confirm("Are you sure you want to delete this Goal?");
+    if(ans == true){
+    var rowNumber = element.closest('tr').rowIndex;
+    document.getElementById("goalTable").deleteRow(rowNumber);
+}
+}
+
+function mySelectFunction(element){
+     var rowNumber = element.closest('tr').rowIndex;
+     var targetsavingselect= document.getElementsByClassName("useramount")[rowNumber-1].value;
+     console.log(targetsavingselect);
+     var savesavingselect = document.getElementsByClassName("usersaveamount")[rowNumber-1].value;
+    document.getElementById("TargetGoal").innerHTML = (parseInt(targetsavingselect)).toFixed(2);
+    document.getElementById("MoneySaved").innerHTML = (parseInt(savesavingselect)).toFixed(2)
+    // Calculate the Money Required
+    var moneySave = document.getElementById("MoneySaved").innerHTML;
+    var moneyRequired = ((parseInt(targetsavingselect))-(parseInt(moneySave))).toFixed(2);
+    if(moneyRequired >= 0){
+      document.getElementById("MoneyRequired").innerHTML= moneyRequired;
+      // SET percentage into the table
+      document.getElementById("mrPercent").innerHTML = ((parseInt(moneyRequired)/parseInt(targetsavingselect))*100).toFixed(0) + "%";
+    }
+    document.getElementById("msPercent").innerHTML = ((parseInt(moneySave)/parseInt(targetsavingselect))*100).toFixed(0) + "%";
+}
+
+
+function updateGoalTable(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "http://localhost:3000/updateGoalTable", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    var user_goal = document.getElementsByClassName("usergoal");
+    var user_amounts = document.getElementsByClassName("useramount");
+    var user_save = document.getElementsByClassName("usersaveamount");
+    var n = document.getElementById("goalTable").rows.length - 1;
+    var user = "<%- username %>";
+    console.log(user);
+    var goaldata = [];
+    for(var i = 0; i < n; i++) {
+        if (user_goal[i].value != "" && user_amounts[i].value != "" && user_save[i].value != "") {
+            goaldata.push({
+                goal: user_goal[i].value,
+                goalamount: user_amounts[i].value,
+                moneySave: user_save[i].value
+            });
+        }
+    }
+    xhttp.send("key=" + user + "&value=" + JSON.stringify(goaldata));
+}
 </script>
 
 <main>
+
 <div class="dailyform">
   <p id="smallWalletnName"> <img src="/image/wallet.png" alt="MyWallet LOGO" title="My Wallet"> &nbsp; My Wallet</p>
   <h2>My Goals</h2>
     
     <table id="goalTable">         
+    <tr>
+      <th>Goal</th>
+      <th>Target Goal (RM)</th>
+      <th>Amount Save (RM)</th>
+      <th></th>
+      <th></th>
+    </tr>
     </table>
 
-<button id="myModalbtn" class="btn btn-success">Add Row</button>
+<button onclick="myCreateGoalFunction()" type="button" class="btn btn-info">Add Row</button>
+
+<button onclick="updateGoalTable()" type="button" class="btn btn-success">Save</button>
+
 </div>
 </main>
 <!-- -----------Display Amount----------- -->
@@ -75,7 +140,7 @@
           <div style="font-size: 35px; padding-bottom: 15px;">
             Money Saved 
           </div>
-          <h1>RM<span id="MoneySaved">500.00</span></h1>
+          <h1>RM<span id="MoneySaved">0.00</span></h1>
           <p id="msPercent">0%</p>
         </td>
         <td class="center">

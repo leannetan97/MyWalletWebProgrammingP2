@@ -40,34 +40,31 @@ footer{
 }
 
 #goalTable{
-	margin-top: 30px;
-	width: 100%;
-	background-color: #98B8D5;
-	border-radius: 5px;
-	margin-left: 50px;
-	margin-right: 50px;
-	white-space:nowrap;
+    width: 110%;
+    background-color: #98B8D5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
+#goalTable td, #goalTable th {
+    padding: 10px 20px;
+}
 
-#typeGoal {
-    width:105%; 
-    margin-left:20px; 
-    margin-right:30px;
-    margin-top: 10px;
-    margin-bottom:10px;
-    padding: 12px 12px;
+input[type=text], select, input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     box-sizing: border-box;
-    background-color: white;
 }
-
 
 .dailyform {
 	margin: 100px;
-    border-radius: 45px;
+    border-radius: 4px;
     background-color: rgba(204,230,255,0.5);
     padding-left: 50px;
     padding-right: 200px;
@@ -163,6 +160,9 @@ footer{
     width: 50%; /* Could be more or less, depending on screen size */
 }
 
+.btn-info{
+    margin-right: 10px;
+}
 /* The Close Button */
 .close {
     color: #aaa;

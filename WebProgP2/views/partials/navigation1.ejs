@@ -20,10 +20,14 @@
               <% } else{%>
               <li>
               <%}%>
-
               <a href="/MyWallet">Home</a></li>
+              <% if (title=='MyWallet'){%>
               <li><a id="info_home">About Us</a></li>
               <li><a id="nav_Ser_home">Services</a></li>
+              <% } else{%>
+              <li><a id="info">About Us</a></li>
+              <li><a id="nav_Ser">Services</a></li>
+              <%}%>
             </ul>
             <!-- RIGHT HAND NAVBAR -->
             <ul class="nav navbar-nav navbar-right">
