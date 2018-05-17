@@ -1,19 +1,19 @@
 # WebProgrammingP2
 Phase 2 Web Programming
 
-| ejs file      | path            | Description      |
-| ------------- |-----------------|------------------|
-| home.ejs      | /MyWallet       |page before login |
-| signup.ejs    | /MyWallet/signup|sign up page      |
-| register.ejs  | /registered     |success register  |
-| login.ejs     | /MyWallet/login |login page        |
-| Login_home.ejs| /MyWalletHome   |HomePageAfterLogin|
-| home_user.ejs | /home           |User Home Page    |
-| goal.ejs      | /home/goal      |goal              |
-| expenses.ejs  | /home/expenses  |manage expenses   |
-| report2016.ejs| /home/report2016|report 2016       |
-| report2017.ejs| /home/report2017|report 2017       |
-| report2018.ejs| /home/report2018|report 2018       |
+| ejs file      | path            | Description      |Login Required     |
+| ------------- |-----------------|------------------|-------------------|
+| home.ejs      | /MyWallet       |page before login | No                |
+| signup.ejs    | /MyWallet/signup|sign up page      | No                |
+| register.ejs  | /registered     |success register  | Yes(for newSignUp)|
+| login.ejs     | /MyWallet/login |login page        | No                |
+| Login_home.ejs| /MyWalletHome   |HomePageAfterLogin| Yes               |
+| home_user.ejs | /home           |User Home Page    | Yes               |
+| goal.ejs      | /home/goal      |goal              | Yes               |
+| expenses.ejs  | /home/expenses  |manage expenses   | Yes               |
+| report2016.ejs| /home/report2016|report 2016       | Yes               |
+| report2017.ejs| /home/report2017|report 2017       | Yes               |
+| report2018.ejs| /home/report2018|report 2018       | Yes               |
 
 
 **navigation1.ejs** - navigation bar for pages before login<br/>
@@ -36,7 +36,6 @@ Phase 2 Web Programming
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- wallet.png<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- googlenew.png<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- js **(all js file except app.js)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- goaljs.js<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- myWalletjs.js<br/>
 |-- views **(all ejs file)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- goal.ejs<br/>
@@ -55,3 +54,7 @@ Phase 2 Web Programming
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- footer.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- navigation1.ejs<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- navigation2.ejs<br/>
+|-- models **(all Schema)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- user.js<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- expenses.js<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- goal.js<br/>
