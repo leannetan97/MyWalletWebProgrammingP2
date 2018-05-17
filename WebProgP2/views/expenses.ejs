@@ -49,13 +49,14 @@ window.onload = () => {
         var cell4 = row.insertCell(3);
         cell1.innerHTML = '<input type="date" class="date" name="date" placeholder="Date" value="' + element.date + '">';
         cell2.innerHTML = '<input type="number" class="amount" name="amount" placeholder="Amount" value="' + element.amount + '">';
-        cell3.innerHTML = '<select class="category" name="category" value="' + element.category + '">' +
+        cell3.innerHTML = '<select class="category" name="category">' +
                         '<option value="groceries">Groceries</option>' +
                         '<option value="food">Food</option>' +
                         '<option value="transport">Transport</option>' +
                         '<option value="shopping">Shopping</option>' +
                         '<option value="others">Others</option>' +
                       '</select>';
+                      cell3.lastChild.value = element.category;
         cell4.innerHTML = '<button onclick="myDeleteFunction(this)" type="button" class="btn btn-danger">Del</button>';
     });
 }
