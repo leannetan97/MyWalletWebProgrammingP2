@@ -32,7 +32,7 @@
 </table>
 <br>
 
-<button onclick="myCreateFunction()" type="button" class="btn btn-info">Add row</button>
+<button onclick="myCreateFunction()" type="button" class="btn btn-info">Add New Expenses</button>
 
 <button onclick="updateTable()" type="button" class="btn btn-success">Save</button>
 
@@ -40,6 +40,7 @@
 window.onload = () => {
     var expTbl = <%- expensesTable %>;
     expTbl = JSON.parse(expTbl.value);
+    console.log(expTbl);
     var table = document.getElementById("expensesTable");
     expTbl.forEach(function(element) {
         var row = table.insertRow(table.rows.length);
@@ -101,7 +102,7 @@ function updateTable(){
     console.log(user);
     var data = []
     for(var i = 0; i < n; i++) {
-        console.log
+    // The specific row of data in the table will not passed to the if one of the field the user leave blank
         if (dates[i].value != "" && amounts[i].value != "") {
             data.push({
                 date: dates[i].value,
@@ -112,6 +113,7 @@ function updateTable(){
         }
     }
     xhttp.send("key=" + user + "&value=" + JSON.stringify(data));
+    alert("You have successful SAVE your expenses.");
 }
 
 </script>

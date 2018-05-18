@@ -71,7 +71,7 @@ function mySelectFunction(element){
     document.getElementById("msPercent").innerHTML = ((parseInt(moneySave)/parseInt(targetsavingselect))*100).toFixed(0) + "%";
 }
 
-
+// Post it to the backend
 function updateGoalTable(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost:3000/updateGoalTable", true);
@@ -80,10 +80,12 @@ function updateGoalTable(){
     var user_amounts = document.getElementsByClassName("useramount");
     var user_save = document.getElementsByClassName("usersaveamount");
     var n = document.getElementById("goalTable").rows.length - 1;
+    // Load the username form databse
     var user = "<%- username %>";
     console.log(user);
     var goaldata = [];
     for(var i = 0; i < n; i++) {
+    // The specific row of data in the table will not passed to the if one of the field the user leave blank
         if (user_goal[i].value != "" && user_amounts[i].value != "" && user_save[i].value != "") {
             goaldata.push({
                 goal: user_goal[i].value,
@@ -93,6 +95,8 @@ function updateGoalTable(){
         }
     }
     xhttp.send("key=" + user + "&value=" + JSON.stringify(goaldata));
+    //Alert when save
+    alert("You have successful SAVE your goals");
 }
 </script>
 
@@ -112,7 +116,7 @@ function updateGoalTable(){
     </tr>
     </table>
 
-<button onclick="myCreateGoalFunction()" type="button" class="btn btn-info">Add Row</button>
+<button onclick="myCreateGoalFunction()" type="button" class="btn btn-info">Add New Goal</button>
 
 <button onclick="updateGoalTable()" type="button" class="btn btn-success">Save</button>
 

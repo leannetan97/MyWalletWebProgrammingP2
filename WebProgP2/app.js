@@ -122,6 +122,7 @@ app.get("/home/:features", isLoggedIn,function(req, res){
 	var f = req.params.features;
     if(f.toLowerCase() === "goal"){
     	//goal
+        //Find data from database and pass to front end
         Goal.find({key: req.user.username}, {_id: 0, key: 0, __v: 0}, function(err, item) {
             if (err) {
                 console.log("Opps Something went Wrong");
@@ -140,6 +141,7 @@ app.get("/home/:features", isLoggedIn,function(req, res){
         });
     }else if(f.toLowerCase() === "expenses"){
     	//manage expenses
+        //Find data frm database and pass to front end
         Expenses.find({key: req.user.username}, {_id: 0, key: 0, __v: 0}, function(err, item) {
             if (err) {
                 console.log("Opps Something went Wrong");

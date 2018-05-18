@@ -158,7 +158,7 @@
                 startAngle = endAngle = 90*Math.PI/180; 
                 rotateAngle = 0; 
     
-                //将传入的数据转化百分比
+                //chg to percentage
                 totleNb = 0;
                 new_data_arr = [];
                 for (var i = 0; i < dataArr.length; i++){
@@ -173,7 +173,7 @@
                 numctr = 50;
                 speed = 1.2; 
                 
-                //指示线 和 文字
+                //axis
                 lineStartAngle = -startAngle;
                 line=40;         
                 textPadding=10;  
@@ -181,11 +181,10 @@
             }
         
             drawMarkers();
-            //绘制比例图及文字
+            //chg to percentage
             function drawMarkers(){
                 ctx.textAlign="left";
                 for (var i = 0; i < dataArr.length; i++){
-                    //绘制比例图及文字
                     ctx.fillStyle = dataArr[i][1];
                     ctx.fillRect(posX, posY + 40 * i, tWidth, tHeight);
                     ctx.moveTo(posX, posY + 40 * i);
@@ -335,7 +334,7 @@
 <div style="padding-bottom:50px;">
 </div>
 
-<div style="background-color: rgba(204,230,255,0.5)">
+<div style="background-color: rgba(204,230,255,0.5); padding-left: 100px; padding-right: 100px;">
 <h1 style="text-align: center; padding-left: 65px; padding-bottom: 40px; padding-top:50px; font-size: 50px;">Expenses Summary</h1>
   <div id="chart"> 
   <canvas id="canvas"></canvas>
