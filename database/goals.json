@@ -1,0 +1,12 @@
+{ 
+    "_id" : ObjectId("5affc277d3c5e927487f466f"), 
+    "key" : "zy_508@hotmail.com", 
+    "value" : "[{\"goal\":\"Family trip\",\"goalamount\":\"20000\",\"moneySave\":\"5000\"},{\"goal\":\"Buy car\",\"goalamount\":\"35000\",\"moneySave\":\"2000\"}]", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5affd9f4d3c5e927487f46b4"), 
+    "key" : "chiajee99@gmail.com", 
+    "value" : "[{\"goal\":\"Buy house\",\"goalamount\":\"300000\",\"moneySave\":\"12000\"},{\"goal\":\"iPhone X\",\"goalamount\":\"5000\",\"moneySave\":\"1800\"}]", 
+    "__v" : NumberInt(0)
+}
