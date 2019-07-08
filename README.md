@@ -1,4 +1,4 @@
-# WebProgramming (Phase 2)
+# Web Programming Assignment WIF2003 (Phase 2)
 Phase 2 Web Programming : Full version of the MyWallet Webpage
 
 <h2>About Us:</h2>
